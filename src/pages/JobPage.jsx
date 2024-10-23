@@ -1,4 +1,4 @@
-import { useParams, useLoaderData, useNavigate, Link } from "react-router-dom";
+import { useLoaderData, useNavigate, Link } from "react-router-dom";
 import { FaArrowLeft, FaMapMarker } from "react-icons/fa";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const JobPage = ({ deleteJob }) => {
   const navigate = useNavigate();
-  const { id } = useParams();
+  // const { id } = useParams();
   const job = useLoaderData();
 
   const onDeleteClick = (jobId) => {
@@ -98,4 +98,5 @@ const jobLoader = async ({ params }) => {
   return data;
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export  { JobPage as default , jobLoader };
