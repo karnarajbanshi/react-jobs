@@ -12,7 +12,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/index.js" // If you have an API route
+      "dest": "/api/index.js" // This routes API requests to your JSON server
     },
     {
       "src": "/(.*)",
