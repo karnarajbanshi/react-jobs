@@ -5,22 +5,22 @@
       "src": "index.html",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist" // This is where Vite outputs the build files
+        "distDir": "dist" 
       }
     },
     {
       "src": "api/index.js",
-      "use": "@vercel/node" // This is for your API route
+      "use": "@vercel/node" 
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "api/index.js" // This routes API requests to your JSON server
+      "dest": "api/index.js" 
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html" // This serves your index.html for all other routes
+      "dest": "/index.html"
     }
   ]
 }
