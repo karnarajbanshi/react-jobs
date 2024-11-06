@@ -2,25 +2,21 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/main.jsx",
+      "src": "index.html",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "dist" // This is where Vite outputs the build files
       }
-    },
-    {
-      "src": "index.js",
-      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "index.js"
+      "dest": "/api/index.js" // If you have an API route
     },
     {
       "src": "/(.*)",
-      "dest": "index.html"
+      "dest": "/index.html"
     }
   ]
 }
